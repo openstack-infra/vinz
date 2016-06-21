@@ -1,0 +1,29 @@
+{
+  "name": "vinz",
+  "version": "0.0.1",
+  "description": "Alternative UI for Gerrit",
+  "main": "index.js",
+  "dependencies": {
+    "react": "~15.0.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "6.0.4",
+    "browser-sync": "~2.12.8",
+    "eslint": "2.10.2",
+    "eslint-plugin-react": "5.1.1"
+  },
+  "scripts": {
+    "lint": "eslint flask/static"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openstack-infra/vinz"
+  },
+  "keywords": [
+    "openstack",
+    "openstack-infra",
+    "gerrit"
+  ],
+  "author": "OpenStack Infra Team <openstack-infra@lists.openstack.org>",
+  "license": "Apache-2.0"
+}
