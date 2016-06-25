@@ -41,9 +41,10 @@ $( document ).ready(function() {
   $('style').remove();
 
   $page_header = $("<div class='page-header'>");
-  $header = $("<h1 class='jumbotron' id='header'></h1>");
+  $header = $("<div class='mynav'></div><h1 class='jumbotron' id='header'></h1>");
+  $nav = $('<ul class="nav nav-pills"> <li role="presentation" class="active"><a href="/vinz/home">Home</a></li> <li role="presentation"><a href="/login">Login</a></li> <li role="presentation"><a href="#">Messages</a></li> </ul>');
   $container = $("<div class='container'>");
-  $("<div class='row'>").append($page_header.append($header)).appendTo($container);
+  $("<div class='row'>").append($page_header.append($nav.append($header))).appendTo($container);
   $row = $("<div class='row'>");
 
   $reviews = $("<div class='info col-md-4'>")
