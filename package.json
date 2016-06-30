@@ -4,6 +4,7 @@
   "description": "Alternative UI for Gerrit",
   "main": "index.js",
   "dependencies": {
+    "bootstrap-sass-loader": "^1.0.10",
     "react": "~15.0.2"
   },
   "devDependencies": {

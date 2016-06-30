@@ -1,0 +1,4 @@
+include vinz/manifest.json
+
+recursive-include vinz/templates *.html
+recursive-include vinz/public *.js *.css
