@@ -1,22 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/paper/bootstrap.min.css" rel="stylesheet">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+import jquery from 'jquery';
+//import bootstrap from 'bootstrap-sass';
+import React from 'react';
+import {render} from 'react-dom';
 
-  <title>Gerrit by Vinz</title>
-  <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
-  <style>
-  #commit-message {
-    space: pre-line;
-  }
-  </style>
-  <script>
+console.log("loading javascript");
 
 function gerritGet (url, func){
   $.get( url, function( data ) {
@@ -28,35 +15,27 @@ function gerritGet (url, func){
 };
 
 $( document ).ready(function() {
+console.log("on ready");
   // Handler for .ready() called.
   var token;
-
   var $body = $('body');
-
-  $body.empty()
-  // Cleanup Gerrit
-  //$( "#gerrit_header" ).remove();
-  //$( "#gerrit_ui").remove();
-  //$( "#toggleci").remove();
-  $('style').remove();
-
-  $page_header = $("<div class='page-header'>");
-  $header = $("<div class='mynav'></div><h1 class='jumbotron' id='header'></h1>");
-  $nav = $('<ul class="nav nav-pills"> <li role="presentation" class="active"><a href="/vinz/home">Home</a></li> <li role="presentation"><a href="/login">Login</a></li> <li role="presentation"><a href="#">Messages</a></li> </ul>');
-  $container = $("<div class='container'>");
+  var $page_header = $("<div class='page-header'>");
+  var $header = $("<div class='mynav'></div><h1 class='jumbotron' id='header'></h1>");
+  var $nav = $('<ul class="nav nav-pills"> <li role="presentation" class="active"><a href="/vinz/home">Home</a></li> <li role="presentation"><a href="/login">Login</a></li> <li role="presentation"><a href="#">Messages</a></li> </ul>');
+  var $container = $("<div class='container'>");
   $("<div class='row'>").append($page_header.append($nav.append($header))).appendTo($container);
-  $row = $("<div class='row'>");
+  var $row = $("<div class='row'>");
 
-  $reviews = $("<div class='info col-md-4'>")
+  var $reviews = $("<div class='info col-md-4'>")
     .prepend($("<h2>").text("Code Review:"))
     .appendTo($row);
-  $message = $("<div class='files col-md-8'>")
+  var $message = $("<div class='files col-md-8'>")
     .prepend($("<h2>").text("Commit Message:"))
     .appendTo($row);
-  $files = $("<div class='files col-md-8'>")
+  var $files = $("<div class='files col-md-8'>")
     .prepend($("<h2>").text("Files changed:"))
     .appendTo($row);
-  $info = $("<div class='info col-md-8'>")
+  var $info = $("<div class='info col-md-8'>")
     .prepend($("<h2>").text("Information:"))
     .appendTo($row);
   $row.appendTo($container);
@@ -65,7 +44,7 @@ $( document ).ready(function() {
 
   // Get auth Token
   $.get("/", function (data) {
-    idx = data.search('xGerritAuth');
+    var idx = data.search('xGerritAuth');
     var token = data.slice(idx + 13, idx + 13 + 32);
 
     var window_url    = window.location.href;
@@ -172,12 +151,10 @@ console.log(data);
   }).fail(function(data) {
     console.log("Failed " + data);
   });
-
 });
 
-    </script>
-  </head>
-  <body>
-    <div id="main"/>
-  </body>
-</html>
+//console.log('sup2');
+//render(
+//    <h1>Hello, World from WebPack!</h1>,
+//    document.getElementById("main")
+//)
