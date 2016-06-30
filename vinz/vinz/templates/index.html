@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Flask with WebPack</title>
+    {{ stylesheet_tag("main_css") | safe }}
+  </head>
+  <body>
+    <div id=main></div>
+    {{ javascript_tag("app_js") | safe }}
+  </body>
+</html>
