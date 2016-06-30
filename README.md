@@ -76,3 +76,26 @@ https://review.openstack.org/vinz/c/331377/
 ```
 
 The voting buttons work!
+
+
+
+TODO - Incorporate Demo instructions properly
+---------------------------------------------
+
+1) cd vinz
+
+2) npm install
+
+3) npm run build
+
+4) cd ..
+
+5) virtualenv venv
+
+6) source venv/bin/activate
+
+7) pip install ./vinz
+
+8) pip install gunicon
+
+9) gunicorn vinz:app

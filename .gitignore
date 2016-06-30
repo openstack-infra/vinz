@@ -1,3 +1,6 @@
 *.swp
 ssl-cert-snakeoil*
 venv
+vinz/node_modules
+vinz/vinz/manifest.json
+vinz/vinz/public
