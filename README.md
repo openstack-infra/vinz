@@ -76,3 +76,25 @@ https://review.openstack.org/vinz/c/331377/
 ```
 
 The voting buttons work!
+
+
+
+TODO - Incorporate Demo instructions properly
+---------------------------------------------
+0) Make sure your NPM and Node are somewhat up to date.
+
+1) cd vinz
+
+2) npm install
+
+3) npm run build
+
+4) cd ..
+
+5) virtualenv venv
+
+6) source venv/bin/activate
+
+7) pip install ./vinz
+
+8) python vinz/vinz/__init__.py 

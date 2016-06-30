@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+  <div class="container">
+    <div class="row">
+      <div class="page-header">
+        <ul class="nav nav-pills">
+          <li class="active" role="presentation">
+            <a href="/vinz/home">Home</a>
+          </li>
+          <li role="presentation">
+            <a href="/login">Login</a>
+          </li>
+          <li role="presentation">
+            <a href="#">Messages</a>
+          </li>
+          <div class="mynav"></div>
+          <h1 id="header" class="jumbotron">
+            <span>#336143 </span>
+            <small>Vinz, the web app</small>
+            <h3>hurgleburgler<small> Diana Whitten</small>
+              <form class="form-inline pull-right">
+                <div class="form-group">
+                  <label for="vote" class="sr-only">Vote:</label>
+                  <div role="group" class="btn-group">
+                    <button id="voteup" type="button" class="form-control btn btn-primary">
+                      <span class="glyphicon glyphicon-thumbs-up"></span>
+                    </button>
+                    <button id="votedown" type="button" class="form-control btn btn-primary">
+                      <span class="glyphicon glyphicon-thumbs-down">
+
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </h3>
+          </h1>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="info col-md-4">
+        <h2>Code Review:</h2>
+        <div class="code-review-list list-group">
+          <p> Verified</p>
+          <p class="list-group-item">Spencer Krum -- 0</p>
+          <p class="list-group-item">Jenkins -- -1</p>
+          <p> Code-Review</p>
+          <p class="list-group-item">Spencer Krum -- 0</p>
+          <p class="list-group-item">Jenkins -- 0</p>
+          <p> Workflow</p>
+          <p class="list-group-item">Spencer Krum -- 0</p>
+        </div>
+      </div>
+      <div class="files col-md-8">
+        <h2>Commit Message:</h2>
+        <div class="commit-message-list list-group">
+          <p class="list-group-item" id="commit-message">Vinz, the web app
+
+* Webpack works and is configured for:
+  * SCSS
+  * React
+  * ES6
+
+* Offline Build for static assets
+
+* Proper Python Package
+
+Change-Id: I831362d8f5050c652e1f923d677b486b3d25cd74
+          </p>
+        </div>
+      </div>
+      <div class="files col-md-8">
+        <h2>Files changed:</h2>
+        <div class="files-modified-list list-group">
+          <a id=".gitignore" class="list-group-item" href="/#/c/336143/3/.gitignore">.gitignore</a>
+          <a id="/COMMIT_MSG" class="list-group-item" href="/#/c/336143/3//COMMIT_MSG">/COMMIT_MSG</a>
+          <a id="README.md" class="list-group-item" href="/#/c/336143/3/README.md">README.md</a>
+          <a id="flask/app.py" class="list-group-item" href="/#/c/336143/3/flask/app.py">flask/app.py</a>
+          <a id="flask/requirements.txt" class="list-group-item" href="/#/c/336143/3/flask/requirements.txt">flask/requirements.txt</a>
+          <a id="package.json" class="list-group-item" href="/#/c/336143/3/package.json">package.json</a>
+          <a id="vinz-shim.user.js" class="list-group-item" href="/#/c/336143/3/vinz-shim.user.js">vinz-shim.user.js</a>
+          <a id="vinz/MANIFEST.in" class="list-group-item" href="/#/c/336143/3/vinz/MANIFEST.in">vinz/MANIFEST.in</a>
+          <a id="vinz/assets/scripts/app.js" class="list-group-item" href="/#/c/336143/3/vinz/assets/scripts/app.js">vinz/assets/scripts/app.js</a>
+          <a id="vinz/assets/styles/main.scss" class="list-group-item" href="/#/c/336143/3/vinz/assets/styles/main.scss">vinz/assets/styles/main.scss</a>
+          <a id="vinz/package.json" class="list-group-item" href="/#/c/336143/3/vinz/package.json">vinz/package.json</a>
+          <a id="vinz/setup.py" class="list-group-item" href="/#/c/336143/3/vinz/setup.py">vinz/setup.py</a>
+          <a id="vinz/tests/__init__.py" class="list-group-item" href="/#/c/336143/3/vinz/tests/__init__.py">vinz/tests/__init__.py</a>
+          <a id="vinz/tests/conftest.py" class="list-group-item" href="/#/c/336143/3/vinz/tests/conftest.py">vinz/tests/conftest.py</a>
+          <a id="vinz/tests/test_views.py" class="list-group-item" href="/#/c/336143/3/vinz/tests/test_views.py">vinz/tests/test_views.py</a>
+          <a id="vinz/vinz/__init__.py" class="list-group-item" href="/#/c/336143/3/vinz/vinz/__init__.py">vinz/vinz/__init__.py</a>
+          <a id="vinz/vinz/templates/index.html" class="list-group-item" href="/#/c/336143/3/vinz/vinz/templates/index.html">vinz/vinz/templates/index.html</a>
+          <a id="vinz/webpack.config.js" class="list-group-item" href="/#/c/336143/3/vinz/webpack.config.js">vinz/webpack.config.js</a>
+        </div>
+      </div>
+      <div class="info col-md-8">
+        <h2>Information:</h2>
+        <div class="review-messages-list list-group">
+          <p class="list-group-item">Diana Whitten -- Uploaded patch set 1.</p>
+          <p class="list-group-item">Jenkins -- Patch Set 1: Verified+1
+
+Build succeeded (check pipeline).
+
+- gate-vinz-npm-run-lint http://logs.openstack.org/43/336143/1/check/gate-vinz-npm-run-lint/2ff28ba/ : SUCCESS in 7m 11s
+- gate-vinz-npm-run-test http://logs.openstack.org/43/336143/1/check/gate-vinz-npm-run-test/7b9a3ac/ : SUCCESS in 5m 41s
+          </p>
+          <p class="list-group-item">Spencer Krum -- Patch Set 1:
+
+When trying to run npm run build I get this:
+
+
+ERROR in ./assets/styles/main.scss
+Module build failed: ReferenceError: Promise is not defined
+    at LazyResult.async (/home/nibz/devel/openstack-infra/vinz/vinz/node_modules/css-loader/node_modules/postcss/lib/lazy-result.js:157:31)
+    at LazyResult.then (/home/nibz/devel/openstack-infra/vinz/vinz/node_modules/css-loader/node_modules/postcss/lib/lazy-result.js:79:21)
+    at processCss (/home/nibz/devel/openstack-infra/vinz/vinz/node_modules/css-loader/lib/processCss.js:198:5)
+    at Object.module.exports (/home/nibz/devel/openstack-infra/vinz/vinz/node_modules/css-loader/lib/loader.js:24:2)
+ @ multi main_css
+        </p>
+          <p class="list-group-item">Diana Whitten -- Uploaded patch set 2.</p>
+          <p class="list-group-item">Diana Whitten -- Uploaded patch set 3.</p>
+          <p class="list-group-item">Jenkins -- Patch Set 3: Verified-1
+
+Build failed (check pipeline).  For information on how to proceed, see http://docs.openstack.org/infra/manual/developers.html#automated-testing
+
+- gate-vinz-npm-run-lint http://logs.openstack.org/43/336143/3/check/gate-vinz-npm-run-lint/295c476/ : FAILURE in 6m 05s
+- gate-vinz-npm-run-test http://logs.openstack.org/43/336143/3/check/gate-vinz-npm-run-test/3d6c9df/ : FAILURE in 5m 00s
+          </p>
+          <p class="list-group-item">Spencer Krum -- Patch Set 3:
+
+The issue I have with this is, how do I log in?
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

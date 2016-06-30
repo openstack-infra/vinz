@@ -11,12 +11,11 @@
 //
 //
 
-
-
-console.log("sup");
 $( document ).ready(function() {
- $( "body" ).load("https://localhost:1234/static/vinz.html #main");
- $("head").load("https://localhost:1234/static/vinz.html");
-//  $("body").html('<div id="main"/>');
- // initialize();
+  $('head')
+    .append('<link href="https://localhost:1234/assets/main_css.css" rel="stylesheet" type="text/css" >')
+    .append('<script src="https://localhost:1234/assets/app_js.js">');
+  
+  $('body').load("https://localhost:1234 #main");
 });
+

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Vinz</title>
+    {{ stylesheet_tag("main_css") | safe }}
+  </head>
+  <body>
+  {% block body %}
+    <div id=main></div>
+  {% endblock %}
+  {{ javascript_tag("app_js") | safe }}
+  </body>
+</html>
